@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-const logo = require("../assets/logo.png");
+const logo = require("../assets/icon.png");
 const Menu = () => {
   return (
     <View style={styles.container}>
