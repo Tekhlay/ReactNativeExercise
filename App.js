@@ -1,10 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import NavBar from './components/NavBar';
+import { StyleSheet, Text, View, Image } from 'react-native';
+const logo = require('./assets/icon.png');
+// import NavBar from './components/NavBar';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Text>My Project</Text>
+      <Image source={logo} style={{ width: 305, height: 159 }} />
+      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Changes you make will automatically reload.</Text>
+      <Text>Shake your phone to open the developer menu.
+      To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
+
+Here's an example of how you can structure a POST request using the provided data in JSON format:
+      </Text>
+      
 
       <StatusBar style="auto" />
     </View>
