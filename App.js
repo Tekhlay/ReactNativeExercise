@@ -37,7 +37,11 @@ export default function App() {
 
         Here's an example of how you can structure a POST request using the provided data in JSON format:
         </Text>
-        <Image source={logo} style={{ width: 305, height: 159 }} />
+        <Pressable
+          onPress={() => Alert.alert('You pressed the image!')}
+        >
+          <Image source={logo} style={{ width: 305, height: 159 }} />
+        </Pressable>
         
         <Button title='Click Me' 
           onPress={()=> console.log("Button clicked!")}
