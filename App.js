@@ -36,7 +36,10 @@ export default function App() {
         </Text>
         <Image source={logo} style={{ width: 305, height: 159 }} />
         
-        <Button title='Click Me' onPress={()=> console.log("Button clicked!")} />
+        <Button title='Click Me' 
+          onPress={()=> console.log("Button clicked!")}
+          color="blue"
+        />
         
 
         <StatusBar style="auto" />
