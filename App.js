@@ -44,7 +44,7 @@ export default function App() {
         </Pressable>
         
         <Button title='Click Me' 
-          onPress={()=> console.log("Button clicked!")}
+          onPress={() => Alert.alert('You pressed the button!')}
           color="blue"
         />
         
