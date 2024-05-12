@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Button } from 'react-native';
 const logo = require('./assets/icon.png');
 // import NavBar from './components/NavBar';
 
@@ -35,8 +35,8 @@ export default function App() {
         Here's an example of how you can structure a POST request using the provided data in JSON format:
         </Text>
         <Image source={logo} style={{ width: 305, height: 159 }} />
-        <button>Click me</button>
-        <Text>The I can scroll</Text>
+        
+        
         
 
         <StatusBar style="auto" />
