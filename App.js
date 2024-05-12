@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView, Button } from 'react-native';
+import { 
+  StyleSheet, Text, View, Image, ScrollView, Button,
+  Pressable, Alert 
+} from 'react-native';
 const logo = require('./assets/icon.png');
 // import NavBar from './components/NavBar';
 
