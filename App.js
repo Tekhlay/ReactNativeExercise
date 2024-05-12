@@ -10,11 +10,11 @@ export default function App() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text>My Project</Text>
+        <Text style={styles.text}>My Project</Text>
         <Image source={logo} style={{ width: 305, height: 159 }} />
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.
+        <Text style={styles.passage}>Shake your phone to open the developer menu.
         To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
 
         Here's an example of how you can structure a POST request using the provided data in JSON format:
@@ -42,12 +42,11 @@ export default function App() {
         >
           <Image source={logo} style={{ width: 305, height: 159 }} />
         </Pressable>
-        
-        <Button title='Click Me' 
-          onPress={() => Alert.alert('You pressed the button!')}
-          color="blue"
-        />
-        
+        <Pressable
+        onPress={() => Alert.alert('You pressed the button!')}
+        >
+          <Text style={styles.btn}>Press Me</Text>
+        </Pressable>
 
         <StatusBar style="auto" />
       </View>
@@ -61,5 +60,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  text: {
+    marginTop: 50,
+    color: 'blue',
+    fontSize: 30,
+    textAlign: 'center',
+  },
+  passage: {
+    margin: 20,
+    fontSize: 16,
+    textAlign: 'justify',
+    color: 'grey',
+  },
+  btn: {
+    margin: 10,
+    padding: 10,
+    backgroundColor: 'blue',
+    color: 'white',
+    borderRadius: 25,
   },
 });
