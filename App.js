@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import {useState} from 'react'; 
 import { 
   StyleSheet, Text, View, Image, ScrollView, Button,
   Pressable, Alert, Modal 
@@ -7,6 +8,8 @@ const logo = require('./assets/icon.png');
 // import NavBar from './components/NavBar';
 
 export default function App() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -43,7 +46,7 @@ export default function App() {
           <Image source={logo} style={{ width: 305, height: 159 }} />
         </Pressable>
         <Pressable
-        onPress={() => Alert.alert('You pressed the button!')}
+        onPress={() => setModalVisible(true)}
         >
           <Text style={styles.btn}>Press Me</Text>
         </Pressable>
@@ -51,24 +54,13 @@ export default function App() {
         <Modal 
           animationType="slide"
           transparent={false}
-          visible={true}
+          visible={modalVisible}
         >
-          <View style={styles.container}>
-            <Text style={styles.text}>My Modal</Text>
-            <Text>Open up App.js to start working on your app!</Text>
-            <Text>Changes you make will automatically reload.</Text>
-            <Text style={styles.passage}>Shake your phone to open the developer menu.
-            To make a POST request using the provided data, you would typically need to specify the endpoint or URL where you want to send the request. Additionally, you need to specify the data format, such as JSON or form data, and any required authentication or headers.
-            </Text>
+          <View style={styles.modal_header}>
             <Pressable
-              onPress={() => Alert.alert('You pressed the image!')}
+            onPress={() => setModalVisible(!modalVisible)}
             >
-              <Image source={logo} style={{ width: 305, height: 159 }} />
-            </Pressable>
-            <Pressable
-            onPress={() => Alert.alert('You pressed the button!')}
-            >
-              <Text style={styles.btn}>Press Me</Text>
+              <Text style={styles.btn}>X</Text>
             </Pressable>
           </View>
         </Modal>
@@ -106,4 +98,11 @@ const styles = StyleSheet.create({
     color: 'white',
     borderRadius: 25,
   },
+
+  modal_header: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'lightgrey',
+  }
 });
