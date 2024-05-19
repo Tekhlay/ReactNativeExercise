@@ -5,7 +5,7 @@ import {
   Pressable, Alert, Modal 
 } from 'react-native';
 const logo = require('./assets/icon.png');
-// import NavBar from './components/NavBar';
+
 
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
