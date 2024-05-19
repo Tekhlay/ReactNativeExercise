@@ -56,12 +56,18 @@ export default function App() {
           transparent={false}
           visible={modalVisible}
         >
-          <View style={styles.modal_header}>
-            <Pressable
-            onPress={() => setModalVisible(!modalVisible)}
-            >
-              <Text style={styles.btn}>X</Text>
-            </Pressable>
+          <View style={styles.modal}>
+            <View style={styles.modal_close}>
+              <Pressable
+              onPress={() => setModalVisible(!modalVisible)}
+              >
+                <Text style={styles.btn_close}>X</Text>
+              </Pressable>
+            </View>
+            <View style={styles.modal_header}>
+              <Text style={styles.text}>Modal Header</Text>
+              <Text style={styles.passage}>This is a modal. You can use it to display some important information or ask for user input.</Text>
+            </View>
           </View>
         </Modal>
 
@@ -99,10 +105,29 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
 
-  modal_header: {
+  btn_close: {
+    width: 50,
+    padding: 10,
+    backgroundColor: 'blue',
+    color: 'white',
+    borderRadius: 25,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: 'yellow',
+  },
+
+  modal: {
     flex: 1,
+    backgroundColor: 'lightgrey',
+  },
+
+  modal_header: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'lightgrey',
+  },
+
+  modal_close:{
+    margin: 10,
+    alignItems: 'flex-end',
   }
 });
